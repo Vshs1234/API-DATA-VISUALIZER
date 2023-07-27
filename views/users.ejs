@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API DATA VISUALIZER</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="container ">
+        <div class="row ">
+            
+            <% users.forEach(function(user){  %>
+               
+                <div class="col col-md-6 col-sm-12 col-lg-4 center-shsv card-spacing">
+                    <div class="card  mb-3 glow-card" style="max-width: 18rem; height:650px; width:1000px; ">
+                        <div class="card-header center-shsv ">User Info - <%= user.id %></div>
+                        <div class="card-body">
+                          <h4 class="card-title text-center" style="font-weight: bolder;"><%= user.name %></h4>
+                          <p class="card-text center-shsv">
+                            <div >
+                                <h6 class="center-shsv"> Email:</h6><span class="center-shsv margin-info"><%= user.email %></span>
+                                <h6 class="center-shsv"> Address: </h6><p>
+                                    <span class="center-shsv"><%= user.address.street %>,</span>
+                                    <span class="center-shsv"><%= user.address.city %>,</span>
+                                    <span class="center-shsv ">pincode-<%= user.address.zipcode %></span>
+                                </p>
+                                <h6 class="center-shsv "> Phone:</h6><span class="center-shsv margin-info"><%= user.phone %></span>
+                                <h6 class="center-shsv"> Website:</h6><span class="center-shsv margin-info"><%= user.website %></span>
+                                <h6 class="center-shsv">Company Name:</h6><span class="center-shsv margin-info"><%= user.companyName %></span>
+                            </div>
+                          </p>
+                        </div>
+                        <div class="card-footer">
+                            <% var ref = "/posts/" + user.id; %>
+                            <a href="<%= ref %>" class="glow" style="width:200px;height:40px;">POSTS</a>
+                        </div>
+                      </div>
+                </div>
+                
+            <%  })  %>
+        </div>
+    </div>
+    
+    
+</body>
+</html>

@@ -1,0 +1,97 @@
+body{
+    background-color:#03001C;
+}
+
+.box{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    margin:70px auto;
+}
+
+
+.glow{
+    color:cyan;
+    background-color: #041C32;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    height: 70px;
+    width: 300px;
+    text-decoration-line: none;
+    text-transform: uppercase;
+    font-weight: bolder;
+    letter-spacing: 2px;
+    box-shadow: 0 0 5px cyan,0 0 25px cyan;
+    padding:20px;
+    margin:25px;
+    
+}
+
+.glow:hover{
+    color:#03001C;
+    background-color: cyan;
+
+    box-shadow: 0 0 5px cyan,0 0 25px cyan,0 0 50px cyan,0 0 100px cyan,0 0 200px cyan;
+}
+
+.center-shsv{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.card-header{
+    color:cyan;
+    background-color: #041C32;
+    text-transform: uppercase;
+    font-weight: bolder;
+    letter-spacing: 2px;
+    box-shadow:0 0 5px cyan,0 0 25px cyan;
+}
+.glow-card{
+    color:#03001C;
+    background-color: #A0BFE0;
+    letter-spacing: 1px;
+    box-shadow:0 0 5px cyan,0 0 50px cyan ;
+}
+.card-spacing{
+    margin:70px auto;
+}
+.margin-info{
+    margin-bottom: 15px;
+}
+.glow-fetch{
+    color:cyan;
+    background-color: #041C32;
+    height: 70px;
+    width: 300px;
+    text-decoration-line: none;
+    text-transform: uppercase;
+    font-weight: bolder;
+    letter-spacing: 2px;
+    box-shadow: 0 0 5px cyan,0 0 25px cyan;   
+}
+.glow-fetch:hover{
+    color:white;
+    background-color: rgb(11, 178, 220);
+
+    box-shadow: 0 0 5px white,0 0 25px white,0 0 50px white,0 0 100px white,0 0 200px white;
+}
+.heading{
+    color:cyan;
+    box-shadow: 0 0 5px cyan;
+}
+
+.navbar-shsv{
+    padding:20px;
+    background-color: #A0BFE0;
+    color:#03001C;
+}
+.navbar-head-shsv{
+    font-size:50px;
+    padding-right:600px;
+}
+.nav-item-shsv{
+    padding-right:0;
+    padding-left:20px;
+}

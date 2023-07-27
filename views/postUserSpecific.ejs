@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API DATA VISUALIZER</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="/public/index.css">
+<style>
+body{
+    background-color:#03001C;
+}
+
+.box{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    margin:70px auto;
+}
+
+
+.glow{
+    color:cyan;
+    background-color: #041C32;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    height: 70px;
+    width: 300px;
+    text-decoration-line: none;
+    text-transform: uppercase;
+    font-weight: bolder;
+    letter-spacing: 2px;
+    box-shadow: 0 0 5px cyan,0 0 25px cyan;
+    padding:20px;
+    margin:25px;
+    
+}
+
+.glow:hover{
+    color:#03001C;
+    background-color: cyan;
+
+    box-shadow: 0 0 5px cyan,0 0 25px cyan,0 0 50px cyan,0 0 100px cyan,0 0 200px cyan;
+}
+
+.center-shsv{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.card-header{
+    color:cyan;
+    background-color: #041C32;
+    text-transform: uppercase;
+    font-weight: bolder;
+    letter-spacing: 2px;
+    box-shadow:0 0 5px cyan,0 0 25px cyan;
+}
+.glow-card{
+    color:#03001C;
+    background-color: #A0BFE0;
+    letter-spacing: 1px;
+    box-shadow:0 0 5px cyan,0 0 50px cyan ;
+}
+.card-spacing{
+    margin:70px auto;
+}
+.margin-info{
+    margin-bottom: 15px;
+}
+.glow-fetch{
+    color:cyan;
+    background-color: #041C32;
+    height: 70px;
+    width: 300px;
+    text-decoration-line: none;
+    text-transform: uppercase;
+    font-weight: bolder;
+    letter-spacing: 2px;
+    box-shadow: 0 0 5px cyan,0 0 25px cyan;   
+}
+.glow-fetch:hover{
+    color:white;
+    background-color: rgb(11, 178, 220);
+
+    box-shadow: 0 0 5px white,0 0 25px white,0 0 50px white,0 0 100px white,0 0 200px white;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container ">
+        <div class="row ">
+            <h4 class="text-center" style="font-weight: bolder;color:cyan;font-size: 35px;padding:50px;padding-bottom: 35px;">By User : <%= posts[0].userName %></h4>
+            <h5 class="text-center" style="color:aqua">User ID--<%= posts[0].userId %></h5>
+            <% posts.forEach(function(post){  %>
+               
+                <div class="col col-md-6 col-sm-12 col-lg-4 center-shsv card-spacing">
+                    <div class="card  mb-3 glow-card" style="max-width: 18rem; height:550px; width:1000px; ">
+                        <div class="card-header center-shsv ">Post Info - <%= post.id %></div>
+                        <div class="card-body">
+                          <p class="card-text center-shsv">
+                            <div >
+                                <h6 class="center-shsv"> Title:</h6><span class="center-shsv margin-info"><%= post.title %></span>
+                                <h6 class="center-shsv">Content: </h6><p><%= post.body %></p>
+                            </div>
+                          </p>
+
+                        </div>
+                        <div class="card-footer">
+                            <% var ref = "/comments/" + posts[0].id; %>
+                            <a href="<%= ref %>" class="glow" style="width:200px;height:40px;">COMMENTS</a>
+                        </div>
+                      </div>
+                </div>
+                
+            <%  })  %>
+        </div>
+    </div>
+    
+    
+</body>
+</html>

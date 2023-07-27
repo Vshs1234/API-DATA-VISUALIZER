@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API DATA VISUALIZER</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div>
+        <form action="/post" method="post">
+            <div class="card text-center glow-card" style="margin:100px auto auto auto;">
+                <div class="card-header" style="padding: 20px; letter-spacing: 2px; font-weight:bolder;font-size:25px;">
+                    <h3>Enter the Post id you want to fetch:</h3>
+                </div>
+                <div class="card-body" style="padding:60px">
+                    <div class="card-title" style="margin: 20px 0;"><span style="font-weight: bold;padding:20px 0;">NOTE:</span> Remember to enter a number in [1..100](both inclusive)</div>
+                    <p class="card-text" style="margin: 30px 0;">
+                        <input type="number"  name="postIdToBeFetched" id=""><br><br>
+                        <button type="submit" class="glow-fetch"  style="margin:15px;">Fetch!</button>
+                    </p>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
